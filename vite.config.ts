@@ -8,8 +8,8 @@ export default defineConfig({
   plugins: [react(),
   viteStaticCopy({
     targets: [
-      {src: 'manifest.json', dest: '.'},
-      {src: 'public/favicon.png', dest: './public'},
+      {src: 'chrome_extension/manifest.json', dest: '.'},
+      {src: 'chrome_extension/icons/*', dest: 'icons'},
 
   ],})],
 
