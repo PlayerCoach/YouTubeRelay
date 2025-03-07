@@ -19,7 +19,23 @@
   "content_scripts": [
     {
       "matches": ["*://*.youtube.com/*"],
-      "js": ["scripts/autoToggle.js"]
+      "js": ["scripts/autoToggle.js"],
+      "run_at": "document_idle"
     }
-  ]
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "tabs"
+  ],
+
+  "host_permissions": [ "*://*.youtube.com/*" ]
+
+
 }

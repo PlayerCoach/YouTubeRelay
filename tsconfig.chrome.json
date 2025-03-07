@@ -2,6 +2,7 @@
   "compilerOptions": {
     "outDir": "dist/scripts",
     "rootDir": "chrome_extension/scripts",
+    "lib": ["DOM", "ESNext"],
     "module": "ESNext",
     "target": "ES2020",
     "moduleResolution": "Node",
@@ -12,7 +13,8 @@
     "sourceMap": true,
     "noEmit": false,
     "noEmitOnError": false,
-    "incremental": false
+    "incremental": false,
+    "types": ["chrome"],
   },
   "include": ["chrome_extension/scripts"],
 }
